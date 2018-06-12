@@ -55,8 +55,9 @@ public class NasabahGeneralController {
         }
 
         Links linksDokument = new Links(linkDokument);
-        Resource<NasabahGeneral> resource = new Resource<>(nasabah, linkPribadi);
+        Resource<NasabahGeneral> resource = new Resource<>(nasabah, new ArrayList<>());
         resource.add(linksDokument);
+        resource.add(linkPribadi);
         return resource;
     }
 }
